@@ -1,5 +1,5 @@
 # iNeuBytes Web Development Internship
-Learning GitHub with ChatGPT 🚀
+
 
 ## Intern Details
 
