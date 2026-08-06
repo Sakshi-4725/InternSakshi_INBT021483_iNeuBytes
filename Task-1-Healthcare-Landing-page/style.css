@@ -205,6 +205,21 @@ header{
     width:100%;
 }
 /* ===========================
+   MOBILE MENU
+=========================== */
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:#0F766E;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.menu-toggle:hover{
+    color:#14B8A6;
+}
+/* ===========================
    HERO SECTION
 =========================== */
 
@@ -542,6 +557,86 @@ header{
 
     transition:.35s;
 }
+
+/* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.why-us{
+    background:#ffffff;
+    text-align:center;
+}
+
+.why-us h2{
+    font-size:48px;
+    margin:20px 0;
+    color:#0F172A;
+}
+
+.why-us > p{
+    max-width:700px;
+    margin:0 auto 70px;
+    color:#64748B;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.why-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.why-card{
+    background:#ffffff;
+    padding:40px 30px;
+    border-radius:24px;
+    border:1px solid #E2E8F0;
+    box-shadow:0 15px 35px rgba(15,118,110,.08);
+    transition:.4s ease;
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+    border-color:#14B8A6;
+    box-shadow:0 25px 45px rgba(20,184,166,.18);
+}
+
+.why-card i{
+    width:80px;
+    height:80px;
+    margin:auto;
+    margin-bottom:25px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#14B8A6,#0F766E);
+
+    color:white;
+    font-size:32px;
+}
+
+.why-card h3{
+    font-size:24px;
+    margin-bottom:15px;
+    color:#0F172A;
+}
+
+.why-card p{
+    color:#64748B;
+    font-size:16px;
+    line-height:1.8;
+}
+
+.why-card:hover i{
+    transform:rotate(10deg) scale(1.08);
+    transition:.35s;
+}
+
 /* ===========================
    DOCTORS SECTION
 =========================== */
@@ -1003,79 +1098,86 @@ footer > p{
 
     color:#94A3B8;
 }
+
 /* ===========================
    RESPONSIVE DESIGN
 =========================== */
 
-@media (max-width:992px){
-
-.hero,
-.about-container,
-.contact-container{
-
-    flex-direction:column;
-    grid-template-columns:1fr;
-}
-
-.service-container,
-.doctor-container,
-.testimonials-container{
-
-    grid-template-columns:repeat(2,1fr);
-}
-
-.footer-container{
-
-    grid-template-columns:1fr;
-}
-
-.hero h1{
-
-    font-size:48px;
-}
-
-.navbar{
-
-    flex-direction:column;
-    gap:20px;
-    height:auto;
-    padding:20px;
-}
-}
-
 @media (max-width:768px){
 
-.service-container,
-.doctor-container,
-.testimonials-container{
+    .menu-toggle{
+        display:block;
+        z-index:1001;
+    }
 
-    grid-template-columns:1fr;
+    .appointment-btn{
+        display:none;
+    }
+
+    .navbar{
+        position:relative;
+    }
+
+    .nav-links{
+
+        position:absolute;
+
+        top:85px;
+        left:0;
+
+        width:100%;
+
+        background:white;
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+
+        gap:25px;
+
+        padding:30px 0;
+
+        box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+        transform:translateY(-120%);
+        opacity:0;
+        visibility:hidden;
+
+        transition:.4s ease;
+    }
+
+    .nav-links.active{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+        visibility:visible;
+    }
+
+}
+/* Active Navigation */
+
+.nav-links a.active{
+    color:#0F766E;
 }
 
-.hero-buttons{
-
-    flex-direction:column;
+.nav-links a.active::after{
+    width:100%;
 }
 
-.hero-stats{
+/* Reveal Animation */
 
-    flex-direction:column;
-    gap:25px;
-}
+.about,
+.services,
+.doctors,
+#appointment,
+#testimonials,
+#contact{
 
-.appointment form{
+    opacity:0;
 
-    grid-template-columns:1fr;
-}
+    transform:translateY(60px);
 
-.form-group:last-child,
-form button{
-
-    grid-column:auto;
-}
-
-.contact-container{
-
-    grid-template-columns:1fr;
-}
+    transition:all .8s ease;
 }
