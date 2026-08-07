@@ -164,21 +164,11 @@ Through this project, I learned:
 
 ## ▶️ How to Run the Project
 
-1. Clone the repository
+🚀 **Live Website:**  
+https://intern-sakshi-inbt-021483-i-neu-bytes-657c-8d5ktykpx.vercel.app
 
-```bash
-git clone https://github.com/Sakshi-4725/HealthBridge.git
-```
+> The project is deployed using Vercel.
 
-2. Open the project folder
-
-```bash
-cd HealthBridge
-```
-
-3. Open `index.html` in your browser.
-
-No additional dependencies are required.
 
 ---
 
