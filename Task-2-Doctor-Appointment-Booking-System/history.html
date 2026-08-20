@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MediBook | My Appointments</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>✚</span> MediBook
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="doctors.html">
+                Doctors
+            </a>
+
+            <a
+                href="history.html"
+                class="active"
+            >
+                My Appointments
+            </a>
+
+        </nav>
+
+
+        <a
+            href="doctors.html"
+            class="nav-btn"
+        >
+            Book Appointment
+        </a>
+
+    </header>
+
+
+    <!-- Page Header -->
+
+    <section class="page-header">
+
+        <p>APPOINTMENT HISTORY</p>
+
+        <h1>My Appointments</h1>
+
+        <span>
+            View and manage your upcoming appointments.
+        </span>
+
+    </section>
+
+
+    <!-- Appointment History -->
+
+    <main class="history-section">
+
+        <div class="history-container">
+
+
+            <!-- Statistics -->
+
+            <div class="history-stats">
+
+                <div class="history-stat">
+
+                    <span class="stat-icon">
+                        📅
+                    </span>
+
+                    <div>
+
+                        <strong id="totalAppointments">
+                            0
+                        </strong>
+
+                        <p>
+                            Total Appointments
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="history-stat">
+
+                    <span class="stat-icon">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <strong id="confirmedAppointments">
+                            0
+                        </strong>
+
+                        <p>
+                            Confirmed
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="history-stat">
+
+                    <span class="stat-icon">
+                        ₹
+                    </span>
+
+                    <div>
+
+                        <strong id="totalFees">
+                            ₹0
+                        </strong>
+
+                        <p>
+                            Total Consultation Fees
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Appointments -->
+
+            <div class="appointments-header">
+
+                <div>
+
+                    <h2>
+                        Appointment List
+                    </h2>
+
+                    <p id="historyMessage">
+                        Your appointments will appear here.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="doctors.html"
+                    class="new-appointment-btn"
+                >
+                    + New Appointment
+                </a>
+
+            </div>
+
+
+            <div
+                id="appointmentList"
+                class="appointment-list"
+            >
+                <!-- Appointments inserted by JavaScript -->
+            </div>
+
+
+            <!-- Empty State -->
+
+            <div
+                id="emptyHistory"
+                class="empty-history"
+            >
+
+                <div>
+                    📅
+                </div>
+
+                <h2>
+                    No Appointments Yet
+                </h2>
+
+                <p>
+                    You haven't booked any appointments.
+                    Find a doctor and book your first appointment.
+                </p>
+
+                <a
+                    href="doctors.html"
+                    class="find-doctor-btn"
+                >
+                    Find a Doctor
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h2>✚ MediBook</h2>
+
+                <p>
+                    Making healthcare appointments
+                    simple and accessible.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="doctors.html">
+                    Doctors
+                </a>
+
+                <a href="history.html">
+                    Appointments
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 MediBook. All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/history.js"></script>
+
+</body>
+
+</html>

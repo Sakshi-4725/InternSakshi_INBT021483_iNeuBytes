@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediBook | Book Appointment</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>✚</span> MediBook
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="doctors.html" class="active">
+                Doctors
+            </a>
+
+            <a href="history.html">
+                My Appointments
+            </a>
+
+        </nav>
+
+        <a href="doctors.html" class="nav-btn">
+            Find a Doctor
+        </a>
+
+    </header>
+
+
+    <!-- Page Header -->
+
+    <section class="page-header">
+
+        <p>APPOINTMENT BOOKING</p>
+
+        <h1>Book Your Appointment</h1>
+
+        <span>
+            Fill in your details and choose a convenient
+            date and time.
+        </span>
+
+    </section>
+
+
+    <!-- Booking Section -->
+
+    <main class="booking-section">
+
+        <div class="booking-container">
+
+            <!-- Form -->
+
+            <div class="booking-form-card">
+
+                <h2>Patient Details</h2>
+
+                <p class="form-description">
+                    Please provide your information to book
+                    the appointment.
+                </p>
+
+
+                <form id="bookingForm">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="patientName">
+                                Full Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="patientName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="patientAge">
+                                Age *
+                            </label>
+
+                            <input
+                                type="number"
+                                id="patientAge"
+                                placeholder="Age"
+                                min="1"
+                                max="120"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="gender">
+                                Gender *
+                            </label>
+
+                            <select id="gender" required>
+
+                                <option value="">
+                                    Select gender
+                                </option>
+
+                                <option value="Male">
+                                    Male
+                                </option>
+
+                                <option value="Female">
+                                    Female
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="10-digit phone number"
+                                pattern="[0-9]{10}"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="example@email.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <h2>Appointment Details</h2>
+
+
+                    <div class="form-group">
+
+                        <label for="selectedDoctor">
+                            Select Doctor *
+                        </label>
+
+                        <select
+                            id="selectedDoctor"
+                            required
+                        >
+
+                            <option value="">
+                                Select doctor
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="appointmentDate">
+                                Select Date *
+                            </label>
+
+                            <input
+                                type="date"
+                                id="appointmentDate"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="timeSlot">
+                                Select Time Slot *
+                            </label>
+
+                            <select
+                                id="timeSlot"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a doctor first
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="reason">
+                            Reason for Visit
+                        </label>
+
+                        <textarea
+                            id="reason"
+                            rows="4"
+                            placeholder="Briefly describe your reason for the appointment..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="confirm-booking-btn"
+                    >
+                        Confirm Appointment
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Appointment Summary -->
+
+            <aside class="booking-summary">
+
+                <div class="summary-icon">
+                    📅
+                </div>
+
+                <h2>Appointment Summary</h2>
+
+                <p>
+                    Your appointment details will appear
+                    here after you select a doctor and
+                    time slot.
+                </p>
+
+
+                <div
+                    id="liveSummary"
+                    class="live-summary"
+                >
+
+                    <div class="summary-placeholder">
+
+                        <span>🩺</span>
+
+                        <p>
+                            Select a doctor to view
+                            appointment details.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h2>✚ MediBook</h2>
+
+                <p>
+                    Making healthcare appointments
+                    simple and accessible.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="doctors.html">
+                    Doctors
+                </a>
+
+                <a href="history.html">
+                    Appointments
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 MediBook. All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/doctors.js"></script>
+
+    <script src="js/booking.js"></script>
+
+</body>
+
+</html>
