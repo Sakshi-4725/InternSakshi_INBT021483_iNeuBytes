@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Dashboard | MediCare</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+<div
+    class="dashboard-layout"
+    id="patientDashboard">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <a
+            href="../index.html"
+            class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div>
+                <strong>MediCare</strong>
+                <span>Patient Portal</span>
+            </div>
+
+        </a>
+
+
+        <nav class="sidebar-menu">
+
+            <a
+                href="patient-dashboard.html"
+                class="active">
+
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
+
+            </a>
+
+            <a
+                href="#"
+                onclick="openAppointmentModal()">
+
+                <i class="fa-solid fa-calendar-plus"></i>
+                Book Appointment
+
+            </a>
+
+            <a href="#appointments">
+
+                <i class="fa-solid fa-calendar-check"></i>
+                Appointments
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa-solid fa-file-medical"></i>
+                Medical Records
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa-solid fa-prescription-bottle-medical"></i>
+                Prescriptions
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa-solid fa-user"></i>
+                My Profile
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button class="logout-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Patient Dashboard
+                </h1>
+
+                <p>
+                    Manage your healthcare in one place.
+                </p>
+
+            </div>
+
+
+            <div class="user-profile">
+
+                <div>
+
+                    <strong
+                        id="patientHeaderName">
+                        Patient
+                    </strong>
+
+                    <span>
+                        Patient
+                    </span>
+
+                </div>
+
+                <div class="user-avatar">
+
+                    <img
+                        id="patientAvatar"
+                        src=""
+                        alt="Patient">
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div class="dashboard-content">
+
+
+            <div class="welcome-banner">
+
+                <div>
+
+                    <h2>
+                        Welcome back,
+                        <span id="patientName">
+                            Patient
+                        </span>!
+                    </h2>
+
+                    <p>
+                        Here's what's happening with your healthcare today.
+                    </p>
+
+                </div>
+
+                <button
+                    class="btn btn-white"
+                    onclick="openAppointmentModal()">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Book Appointment
+
+                </button>
+
+            </div>
+
+
+            <!-- STATS -->
+
+            <div class="dashboard-stats">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong id="appointmentCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Appointments
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+
+                        <i class="fa-solid fa-user-doctor"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            4
+                        </strong>
+
+                        <span>
+                            Doctors Consulted
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+
+                        <i class="fa-solid fa-file-medical"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            8
+                        </strong>
+
+                        <span>
+                            Medical Records
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+
+                        <i class="fa-solid fa-prescription-bottle-medical"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            3
+                        </strong>
+
+                        <span>
+                            Prescriptions
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- GRID -->
+
+            <div class="dashboard-grid">
+
+
+                <div
+                    class="dashboard-card"
+                    id="appointments">
+
+                    <div class="dashboard-card-header">
+
+                        <h3>
+                            Upcoming Appointments
+                        </h3>
+
+                        <a href="#">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div id="patientAppointments">
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-header">
+
+                        <h3>
+                            Quick Actions
+                        </h3>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+
+                        <a
+                            href="#"
+                            class="quick-action"
+                            onclick="openAppointmentModal()">
+
+                            <i class="fa-solid fa-calendar-plus"></i>
+
+                            <span>
+                                Book Appointment
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="../index.html#doctors"
+                            class="quick-action">
+
+                            <i class="fa-solid fa-user-doctor"></i>
+
+                            <span>
+                                Find Doctor
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            class="quick-action">
+
+                            <i class="fa-solid fa-file-medical"></i>
+
+                            <span>
+                                Medical Records
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            class="quick-action">
+
+                            <i class="fa-solid fa-prescription-bottle-medical"></i>
+
+                            <span>
+                                Prescriptions
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <div class="dashboard-card" style="margin-top:20px">
+
+                <div class="dashboard-card-header">
+
+                    <h3>
+                        Personal Information
+                    </h3>
+
+                </div>
+
+                <div class="profile-card" style="border:none;padding:0">
+
+                    <div class="profile-large-avatar">
+
+                        <img
+                            id="patientProfileImage"
+                            src="https://randomuser.me/api/portraits/women/79.jpg"
+                            alt="Patient">
+
+                    </div>
+
+                    <div class="profile-info">
+
+                        <h2 id="patientProfileName">
+                            <span id="patientName">
+                                Patient
+                            </span>
+                        </h2>
+
+                        <p id="patientEmail">
+                            patient@example.com
+                        </p>
+
+                        <p style="margin-top:5px">
+                            Registered Patient • MediCare
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- APPOINTMENT MODAL -->
+
+<div
+    class="modal"
+    id="appointmentModal">
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+
+            <h2>
+                Book Appointment
+            </h2>
+
+            <button
+                class="close-modal"
+                onclick="closeModal()">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <form id="appointmentForm">
+
+
+            <div class="form-group">
+
+                <label>
+                    Select Doctor
+                </label>
+
+                <select
+                    id="appointmentDoctor"
+                    class="form-control"
+                    required>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="appointmentDate"
+                        class="form-control"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Time
+                    </label>
+
+                    <select
+                        id="appointmentTime"
+                        class="form-control"
+                        required>
+
+                        <option value="">
+                            Select Time
+                        </option>
+
+                        <option>
+                            09:00 AM
+                        </option>
+
+                        <option>
+                            10:00 AM
+                        </option>
+
+                        <option>
+                            10:30 AM
+                        </option>
+
+                        <option>
+                            11:00 AM
+                        </option>
+
+                        <option>
+                            12:00 PM
+                        </option>
+
+                        <option>
+                            02:00 PM
+                        </option>
+
+                        <option>
+                            03:00 PM
+                        </option>
+
+                        <option>
+                            04:00 PM
+                        </option>
+
+                        <option>
+                            05:00 PM
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Reason for Visit
+                </label>
+
+                <textarea
+                    id="appointmentReason"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Describe your concern..."></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+                style="width:100%">
+
+                Confirm Appointment
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<div id="toastContainer"></div>
+
+
+<script src="../js/script.js"></script>
+
+</body>
+
+</html>

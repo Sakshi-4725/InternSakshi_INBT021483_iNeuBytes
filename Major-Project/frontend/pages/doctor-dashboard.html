@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Doctor Dashboard | MediCare</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+<div
+    class="dashboard-layout"
+    id="doctorDashboard">
+
+
+    <aside class="sidebar">
+
+        <a
+            href="../index.html"
+            class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div>
+                <strong>MediCare</strong>
+                <span>Doctor Portal</span>
+            </div>
+
+        </a>
+
+
+        <nav class="sidebar-menu">
+
+            <a
+                href="doctor-dashboard.html"
+                class="active">
+
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
+
+            </a>
+
+            <a href="#appointments">
+
+                <i class="fa-solid fa-calendar-check"></i>
+                Appointments
+
+            </a>
+
+            <a href="#patients">
+
+                <i class="fa-solid fa-users"></i>
+                My Patients
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa-solid fa-file-medical"></i>
+                Medical Records
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa-solid fa-prescription-bottle-medical"></i>
+                Prescriptions
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa-solid fa-user"></i>
+                My Profile
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button class="logout-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Doctor Dashboard
+                </h1>
+
+                <p>
+                    Manage your patients and appointments.
+                </p>
+
+            </div>
+
+
+            <div class="user-profile">
+
+                <div>
+
+                    <strong id="doctorHeaderName">
+                        Doctor
+                    </strong>
+
+                    <span>
+                        Medical Specialist
+                    </span>
+
+                </div>
+
+                <div class="user-avatar">
+
+                    <img
+                        id="doctorAvatar"
+                        src=""
+                        alt="Doctor">
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div class="dashboard-content">
+
+
+            <div class="profile-card">
+
+                <div class="profile-large-avatar">
+
+                    <img
+                          id="doctorProfileImage"
+                          src=""
+                           alt="Doctor">
+
+                </div>
+
+                <div class="profile-info">
+
+                    <h2 id="doctorName">
+                        Doctor
+                    </h2>
+
+                    <p id="doctorSpecialty">
+                        Specialist
+                    </p>
+
+                    <p id="doctorQualification">
+                        Qualification
+                    </p>
+
+                    <p id="doctorExperience">
+                        Experience
+                    </p>
+
+                </div>
+
+                <div style="margin-left:auto">
+
+                    <span class="status confirmed">
+                        <i class="fa-solid fa-circle"></i>
+                        Available Today
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-stats">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong id="doctorAppointmentCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Appointments
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            126
+                        </strong>
+
+                        <span>
+                            Total Patients
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            4.9
+                        </strong>
+
+                        <span>
+                            Patient Rating
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            ₹48K
+                        </strong>
+
+                        <span>
+                            This Month
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div
+                class="dashboard-card"
+                id="appointments">
+
+                <div class="dashboard-card-header">
+
+                    <h3>
+                        Patient Appointments
+                    </h3>
+
+                    <span class="status confirmed">
+                        Live
+                    </span>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table class="data-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Patient
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Time
+                                </th>
+
+                                <th>
+                                    Reason
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="doctorAppointments">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="dashboard-card"
+                id="patients"
+                style="margin-top:20px">
+
+                <div class="dashboard-card-header">
+
+                    <h3>
+                        Today's Schedule
+                    </h3>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <div class="quick-action">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            09:00 AM<br>
+                            Consultation
+                        </span>
+
+                    </div>
+
+                    <div class="quick-action">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            10:30 AM<br>
+                            Patient Checkup
+                        </span>
+
+                    </div>
+
+                    <div class="quick-action">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            12:00 PM<br>
+                            Follow-up
+                        </span>
+
+                    </div>
+
+                    <div class="quick-action">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            02:30 PM<br>
+                            Consultation
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<div id="toastContainer"></div>
+
+
+<script src="../js/script.js"></script>
+
+</body>
+
+</html>

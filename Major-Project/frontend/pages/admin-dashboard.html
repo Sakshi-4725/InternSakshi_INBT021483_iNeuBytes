@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | MediCare</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+<div
+    class="dashboard-layout"
+    id="adminDashboard">
+
+
+    <aside class="sidebar">
+
+        <a
+            href="../index.html"
+            class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div>
+                <strong>MediCare</strong>
+                <span>Admin Portal</span>
+            </div>
+
+        </a>
+
+
+        <nav class="sidebar-menu">
+
+            <a
+                href="admin-dashboard.html"
+                class="active">
+
+                <i class="fa-solid fa-chart-pie"></i>
+                Dashboard
+
+            </a>
+
+            <a href="#users">
+
+                <i class="fa-solid fa-users"></i>
+                Users
+
+            </a>
+
+            <a href="#doctors">
+
+                <i class="fa-solid fa-user-doctor"></i>
+                Doctors
+
+            </a>
+
+            <a href="#appointments">
+
+                <i class="fa-solid fa-calendar-check"></i>
+                Appointments
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa-solid fa-chart-line"></i>
+                Reports
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa-solid fa-gear"></i>
+                Settings
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button class="logout-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+                <p>
+                    Monitor and manage the MediCare platform.
+                </p>
+
+            </div>
+
+
+            <div class="user-profile">
+
+                <div>
+
+                    <strong>
+                        Administrator
+                    </strong>
+
+                    <span>
+                        System Admin
+                    </span>
+
+                </div>
+
+                <div class="user-avatar">
+
+                    <img
+                        src="https://randomuser.me/api/portraits/men/75.jpg"
+                        alt="Admin">
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <div class="dashboard-content">
+
+
+            <div class="welcome-banner">
+
+                <div>
+
+                    <h2>
+                        MediCare Overview
+                    </h2>
+
+                    <p>
+                        Here's the current status of your healthcare platform.
+                    </p>
+
+                </div>
+
+                <span>
+                    <i class="fa-solid fa-circle"></i>
+                    System Operational
+                </span>
+
+            </div>
+
+
+            <!-- STATS -->
+
+            <div class="dashboard-stats">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong id="adminPatients">
+                            0
+                        </strong>
+
+                        <span>
+                            Total Patients
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+
+                        <i class="fa-solid fa-user-doctor"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong id="adminDoctors">
+                            0
+                        </strong>
+
+                        <span>
+                            Doctors
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong id="adminAppointments">
+                            0
+                        </strong>
+
+                        <span>
+                            Appointments
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            ₹8.4L
+                        </strong>
+
+                        <span>
+                            Monthly Revenue
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- USERS -->
+
+            <div
+                class="dashboard-card"
+                id="users">
+
+                <div class="dashboard-card-header">
+
+                    <h3>
+                        Registered Users
+                    </h3>
+
+                    <span class="status confirmed">
+                        Active
+                    </span>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table class="data-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Name
+                                </th>
+
+                                <th>
+                                    Email
+                                </th>
+
+                                <th>
+                                    Phone
+                                </th>
+
+                                <th>
+                                    Role
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="adminUsers">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- APPOINTMENTS -->
+
+            <div
+                class="dashboard-card"
+                id="appointments"
+                style="margin-top:20px">
+
+                <div class="dashboard-card-header">
+
+                    <h3>
+                        All Appointments
+                    </h3>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table class="data-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Patient
+                                </th>
+
+                                <th>
+                                    Doctor
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Time
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="adminAppointmentTable">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- SYSTEM INFO -->
+
+            <div
+                class="dashboard-card"
+                style="margin-top:20px">
+
+                <div class="dashboard-card-header">
+
+                    <h3>
+                        System Information
+                    </h3>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+
+                    <div class="quick-action">
+
+                        <i class="fa-solid fa-server"></i>
+
+                        <span>
+                            Server<br>
+                            Online
+                        </span>
+
+                    </div>
+
+
+                    <div class="quick-action">
+
+                        <i class="fa-solid fa-database"></i>
+
+                        <span>
+                            Database<br>
+                            Connected
+                        </span>
+
+                    </div>
+
+
+                    <div class="quick-action">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>
+                            Security<br>
+                            Protected
+                        </span>
+
+                    </div>
+
+
+                    <div class="quick-action">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            Uptime<br>
+                            99.9%
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<div id="toastContainer"></div>
+
+
+<script src="../js/script.js"></script>
+
+</body>
+
+</html>

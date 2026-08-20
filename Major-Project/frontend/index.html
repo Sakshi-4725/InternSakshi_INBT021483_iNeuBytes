@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediCare | Healthcare Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div>
+                <strong>MediCare</strong>
+                <span>Healthcare</span>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <div class="nav-buttons">
+
+            <a href="pages/login.html" class="btn btn-outline">
+                Login
+            </a>
+
+            <a href="pages/register.html" class="btn btn-primary">
+                Get Started
+            </a>
+
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-bg-circle circle-one"></div>
+    <div class="hero-bg-circle circle-two"></div>
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-shield-heart"></i>
+                Trusted Healthcare Platform
+            </div>
+
+            <h1>
+                Your Health.
+                <span>Our Priority.</span>
+            </h1>
+
+            <p>
+                Connect with qualified doctors, book appointments,
+                manage your healthcare and get professional medical
+                support from anywhere.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#doctors" class="btn btn-primary btn-large">
+                    Find a Doctor
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="pages/register.html" class="btn btn-white btn-large">
+                    Create Account
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <strong>25K+</strong>
+                    <span>Patients</span>
+                </div>
+
+                <div>
+                    <strong>150+</strong>
+                    <span>Doctors</span>
+                </div>
+
+                <div>
+                    <strong>50K+</strong>
+                    <span>Appointments</span>
+                </div>
+
+                <div>
+                    <strong>4.9</strong>
+                    <span>Rating</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image-area">
+
+            <div class="hero-image-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=85"
+                    alt="Professional Doctor">
+
+                <div class="doctor-floating-card">
+
+                    <div class="doctor-avatar">
+                        <img
+                            src="https://randomuser.me/api/portraits/women/44.jpg"
+                            alt="Doctor">
+                    </div>
+
+                    <div>
+                        <strong>Dr. Emily Carter</strong>
+                        <span>Cardiologist</span>
+                    </div>
+
+                    <div class="online-dot"></div>
+
+                </div>
+
+                <div class="appointment-floating-card">
+
+                    <div class="floating-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>12,500+</strong>
+                        <span>Appointments completed</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">OUR SERVICES</span>
+
+            <h2>
+                Healthcare made
+                <span>simple</span>
+            </h2>
+
+            <p>
+                Everything you need to manage your healthcare
+                conveniently in one place.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon blue">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+
+                <h3>Find Doctors</h3>
+
+                <p>
+                    Find experienced and verified doctors
+                    based on specialization and availability.
+                </p>
+
+                <a href="#doctors">
+                    Explore Doctors
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon green">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <h3>Book Appointment</h3>
+
+                <p>
+                    Schedule appointments with your preferred
+                    doctor quickly and easily.
+                </p>
+
+                <a href="#doctors">
+                    Book Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon purple">
+                    <i class="fa-solid fa-file-medical"></i>
+                </div>
+
+                <h3>Medical Records</h3>
+
+                <p>
+                    Keep your medical information and
+                    appointment history organized.
+                </p>
+
+                <a href="pages/login.html">
+                    View Records
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon orange">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <h3>24/7 Support</h3>
+
+                <p>
+                    Get assistance whenever you need help
+                    navigating your healthcare journey.
+                </p>
+
+                <a href="#contact">
+                    Contact Us
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DOCTORS ================= -->
+
+<section class="section doctors-section" id="doctors">
+
+    <div class="container">
+
+        <div class="section-heading heading-row">
+
+            <div>
+
+                <span class="section-label">OUR SPECIALISTS</span>
+
+                <h2>
+                    Meet our expert
+                    <span>doctors</span>
+                </h2>
+
+                <p>
+                    Choose from our team of experienced healthcare professionals.
+                </p>
+
+            </div>
+
+            <a href="pages/login.html" class="btn btn-outline">
+                View All Doctors
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="doctor-filter">
+
+            <button class="filter-btn active" data-specialty="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-specialty="Cardiologist">
+                Cardiology
+            </button>
+
+            <button class="filter-btn" data-specialty="Neurologist">
+                Neurology
+            </button>
+
+            <button class="filter-btn" data-specialty="Dermatologist">
+                Dermatology
+            </button>
+
+            <button class="filter-btn" data-specialty="Pediatrician">
+                Pediatrics
+            </button>
+
+            <button class="filter-btn" data-specialty="Orthopedic">
+                Orthopedic
+            </button>
+
+        </div>
+
+
+        <div class="doctor-grid" id="doctorGrid">
+
+            <!-- Javascript will load doctors here -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="why-section" id="about">
+
+    <div class="container why-container">
+
+        <div class="why-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85"
+                alt="Healthcare Team">
+
+            <div class="experience-card">
+
+                <strong>10+</strong>
+                <span>Years of<br>Healthcare Excellence</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="why-content">
+
+            <span class="section-label">WHY MEDICARE?</span>
+
+            <h2>
+                Healthcare that puts
+                <span>you first</span>
+            </h2>
+
+            <p>
+                MediCare is designed to make healthcare management
+                easier, faster and more accessible for everyone.
+            </p>
+
+
+            <div class="benefit-list">
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <h3>Verified Doctors</h3>
+                        <p>
+                            Connect with qualified and experienced
+                            healthcare professionals.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <h3>Easy Appointment Booking</h3>
+                        <p>
+                            Schedule and manage appointments without
+                            unnecessary waiting.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+
+                    <div>
+                        <h3>Secure Information</h3>
+                        <p>
+                            Your healthcare information is organized
+                            and protected.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+    <div class="container cta-container">
+
+        <div>
+
+            <span>READY TO GET STARTED?</span>
+
+            <h2>
+                Take control of your health today.
+            </h2>
+
+            <p>
+                Join thousands of patients using MediCare
+                to manage their healthcare.
+            </p>
+
+        </div>
+
+        <a href="pages/register.html" class="btn btn-white btn-large">
+            Create Free Account
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-label">CONTACT US</span>
+
+            <h2>
+                We're here to
+                <span>help</span>
+            </h2>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>Visit Us</h3>
+
+                <p>
+                    MediCare Healthcare Center<br>
+                    New Delhi, India
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <h3>Call Us</h3>
+
+                <p>
+                    +91 98765 43210<br>
+                    Mon - Sun, 24/7
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <h3>Email Us</h3>
+
+                <p>
+                    support@medicare.com<br>
+                    help@medicare.com
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo footer-logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <div>
+                    <strong>MediCare</strong>
+                    <span>Healthcare</span>
+                </div>
+
+            </a>
+
+            <p>
+                Making healthcare simpler, smarter
+                and more accessible for everyone.
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Platform</h3>
+
+            <a href="#doctors">Find Doctors</a>
+            <a href="pages/login.html">Appointments</a>
+            <a href="pages/login.html">Medical Records</a>
+            <a href="pages/login.html">Dashboard</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Account</h3>
+
+            <a href="pages/login.html">Login</a>
+            <a href="pages/register.html">Register</a>
+            <a href="pages/patient-dashboard.html">Patient Portal</a>
+            <a href="pages/doctor-dashboard.html">Doctor Portal</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Support</h3>
+
+            <a href="#contact">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Help Center</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+                © 2026 MediCare Healthcare System. All Rights Reserved.
+            </p>
+
+            <p>
+                Designed for modern healthcare management.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<div id="toastContainer"></div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
